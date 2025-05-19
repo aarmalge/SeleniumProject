@@ -8,6 +8,8 @@
             <class name="LoginwEmptyCred"/>
             <class name="LoginwValidCred"/>
             <class name="SearchBox"/>
+            <class name="VerifyDropdowns"/>
+            <class name="InformationSectionTabHandlingTest"/>
         </classes>
     </test>
 </suite>
