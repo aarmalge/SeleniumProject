@@ -82,4 +82,5 @@ public class InformationSectionTabHandling {
             driver.quit();
         }
     }
+
 }
