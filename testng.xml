@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="RegressionSuite">
+    <test name="RegressionTests">
+        <classes>
+            <class name="Categories"/>
+            <class name="InformationSectionTabHandling"/>
+            <class name="VerifyDropdowns"/>
+            <class name="LoginwValidCred"/>
+            <class name="LoginwEmptyCred"/>
+            <class name="SearchBox"/>
+             <class name="WishList"/>
+            <class name="LogInvalidCred"/>
+        </classes>
+    </test>
+</suite>
