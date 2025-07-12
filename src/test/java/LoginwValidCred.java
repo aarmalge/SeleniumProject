@@ -1,3 +1,4 @@
+import Base.Baseclass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,17 +11,8 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class LoginwValidCred {
-    WebDriver driver;
-    String url = "https://demowebshop.tricentis.com/login";
+public class LoginwValidCred extends Baseclass {
 
-    @BeforeClass
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get(url);
-    }
     @Test
     public void loginWithInvalidCredentials() throws InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -32,9 +24,4 @@ public class LoginwValidCred {
 
     }
 
-    @AfterClass
-    public void tearDown() {
-        driver.quit();
-    }
 }
-

@@ -1,3 +1,5 @@
+import Base.Baseclass;
+import Utility.WaitUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,18 +11,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-public class Categories {
+public class Categories extends Baseclass {
 
     WebDriver driver;
     String baseUrl = "http://demowebshop.tricentis.com/";
 
-    @BeforeMethod
-    public void setUp() {
-
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.navigate().to(baseUrl);
-    }
 
     @Test (priority = 1)
     public void testBooks() {

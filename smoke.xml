@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="SmokeTest">
+    <test name="SmokeTest">
+        <classes>
+
+            <class name="SearchBox"/>
+            <class name="WishList"/>
+
+        </classes>
+    </test>

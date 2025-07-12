@@ -1,3 +1,4 @@
+import Base.Baseclass;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,19 +10,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.Base64;
 import java.util.List;
 
-public class SearchBox {
-    WebDriver driver;
-    String url = "https://demowebshop.tricentis.com/";
+public class SearchBox  extends Baseclass {
 
-    @BeforeClass
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get(url);
-    }
+
 
     @Test
     public void testSearchBox() {
@@ -49,10 +43,5 @@ public class SearchBox {
 
     }
 
-    @AfterClass
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+
 }

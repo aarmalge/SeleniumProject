@@ -1,3 +1,4 @@
+import Base.Baseclass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,19 +10,12 @@ import helper.SikuliHelper;
 
 import java.time.Duration;
 
-public class LoginToCheckout {
+public class LoginToCheckout extends Baseclass {
 
     WebDriver driver;
     WebDriverWait wait;
     SikuliHelper sikuliHelper;
 
-    @BeforeClass
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        sikuliHelper = new SikuliHelper();
-    }
 
     @Test
     public void loginAndCheckoutTest() throws InterruptedException {

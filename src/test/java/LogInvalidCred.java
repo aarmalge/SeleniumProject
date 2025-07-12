@@ -1,3 +1,5 @@
+import Base.Baseclass;
+import com.fasterxml.jackson.databind.ser.Serializers;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,17 +13,12 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
-public class LogInvalidCred {
+public class LogInvalidCred extends Baseclass {
     WebDriver driver;
     String url = "https://demowebshop.tricentis.com/login";
 
-    @BeforeClass
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get(url);
-    }
+
+
     @Test
     public void loginWithInvalidCredentials() throws InterruptedException, IOException {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -36,11 +33,5 @@ public class LogInvalidCred {
         File tempfile= screenshot.getScreenshotAs(OutputType.FILE);
         File destfile= new File("C:\\Projects\\New folder\\screenshots\\error.png");
         FileUtils.copyFile(tempfile,destfile);
-    }
-
-    @AfterClass
-    public void tearDown() {
-        driver.quit();
-    }
-}
+    }}
 
